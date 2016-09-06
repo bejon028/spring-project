@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>HELLO</title>
+</head>
+<body>
+<form id="gizmo-form" role="form" th:action="@{/save}" method="post" th:object="${dummy}">
+    <div>
+        <label for="field1">Field 1</label>
+        <input type="text" id="field1" name="field1" th:field="${dummy.field1}"/>
+    </div>
+    <div>
+        <label for="field2">Field 2</label>
+        <input type="text" id="field2" name="field2" th:field="${dummy.field2}"/>
+    </div>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>
+</body>
+</html>
